@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Equator test</title>
+
+        <!-- Just simply linking to the Tailwind file via CDN for purposes of this demo. The PostCSS method would be much preferred in a real world project -->
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+        <!-- Minor custom css, resets etc -->
+        <link href="custom.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Header-->
+        <header class="container px-5 mx-auto flex items-center justify-between pt-10 relative lg:static">
+            <!-- Left: Logo -->
+            <a href="#">logo</a>
+
+            <!-- Right: Booking Button, Nav Menu -->
+            <div class="flex lg:relative">
+                <!-- Button -->
+                <a href="#" class="hidden lg:block border border-black py-4 px-8 rounded-md font-bold">
+                    Book a meeting
+                </a>
+
+                <!-- Menu -->
+                <span hidden id="menu-label">Main menu</span>
+                <button class="ml-8 text-4xl" 
+                    aria-labelledby="menu-label"
+                    aria-expanded="false"
+                    data-menu-button>
+                    &#9776;
+                </button>
+                <nav data-menu aria-labelledby="menu-label" class="invisible absolute w-full top-full left-0 mt-3 bg-gray-100 rounded-b-md rounded-tl-md">
+                    <ul>
+                        <li><a href="#" class="block px-8 py-4 pt-6">Link 1</a></li>
+                        <li><a href="#" class="block px-8 py-4">Link 2</a></li>
+                        <li><a href="#" class="block px-8 py-4">Link 3</a></li>
+                        <li><a href="#" class="block px-8 py-4 pb-6">Link 4</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </header>
+
+        <!-- Hero -->
+        <section class="pt-32 pb-24 border-b-2 border-black">
+            <div class="container mx-auto px-5">
+                <h1 class="text-5xl font-bold lg:text-6xl mb-8">Service title</h1>
+                <p class="text-xl leading-normal max-w-lg 2xl:leading-snug 2xl:text-3xl 2xl:max-w-3xl 2xl:leading-normal mb-10">
+                    Lorem Ipsum is simply dummy text of the printing and 
+                    typesetting industry. Lorem Ipsum has been the industry's
+                     standard dummy text ever since the 1500s, when an
+                </p>
+                <strong class="block mb-4 text-lg lg:text-xl">Want to talk to someone about this sector?</strong>
+                <a href="#" class="block text-center lg:inline-block border border-black py-4 px-7 rounded-md font-bold">
+                    Book a meeting
+                </a>
+            </div>
+        </section>
+
+        <!-- Article with video -->
+        <article class="container mx-auto px-5 py-20 lg:py-32 border-b-2 border-black">
+            <div class="lg:max-w-3xl 2xl:max-w-4xl mx-auto">
+                <h2 class="text-3xl lg:text-5xl font-bold mb-8 lg:mb-16">Content Heading</h2>
+                <p class="text-xl lg:text-xl leading-normal 2xl:leading-relaxed mb-8 lg:mb-16">
+                    Supporting body copy - Lorem Ipsum is simply dummy text of the printing and 
+                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+                    since the 1500s, when an unknown printer took a galley of type and scrambled it to 
+                    make a type specimen book. It has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more 
+                    recently with desktop publishing software like Aldus PageMaker including versions of
+                </p>
+                <figure>
+                    <video controls class="w-full rounded-xl mb-10">
+                        <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>Video caption here</figcaption>
+                </figure>
+            </div>
+        </article>
+
+
+        <!-- Featured articles, if using a framework such as Vue, these would just be reusable components with dynamic content -->
+        <div class="container mx-auto px-5 py-20 lg:py-32 border-b-2 border-black">
+            <section class="lg:grid lg:grid-cols-2 lg:gap-x-16 mb-32">
+                <div class="self-center">
+                    <h3 class="text-3xl lg:text-4xl 2xl:text-5xl font-bold mb-10">Content title here</h3>
+                    <p class="text-xl lg:text-xl leading-normal 2xl:leading-relaxed mb-10">
+                        Supporting body copy - Lorem Ipsum is simply dummy text of the printing and 
+                        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+                        since the 1500s, when an unknown printer took a galley of type and scrambled it to 
+                        make a type specimen book.
+                    </p>
+                    <a href="#" class="block text-center lg:inline-block border border-black py-4 px-16 rounded-md font-bold mb-8 lg:mb-0">
+                        Book a meeting
+                    </a>
+                </div>
+                <img src="https://picsum.photos/800/700" alt="A well described alternative title for the image used">
+            </section>
+
+            <section class="lg:grid lg:grid-cols-2 lg:gap-x-16 mb-32">
+                <img src="https://picsum.photos/800/700" alt="A well described alternative title for the image used" class="mb-8 lg:mb-0">
+                <div class="self-center">
+                    <h3 class="text-3xl lg:text-4xl 2xl:text-5xl font-bold mb-10">Content title here</h3>
+                    <p class="text-xl lg:text-xl leading-normal 2xl:leading-relaxed mb-10">
+                        Supporting body copy - Lorem Ipsum is simply dummy text of the printing and 
+                        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+                        since the 1500s, when an unknown printer took a galley of type and scrambled it to 
+                        make a type specimen book.
+                    </p>
+                    <a href="#" class="block text-center lg:inline-block border border-black py-4 px-16 rounded-md font-bold mb-8 lg:mb-0">
+                        Book a meeting
+                    </a>
+                </div>
+            </section>
+
+            <section class="lg:grid lg:grid-cols-2 lg:gap-x-16">
+                <div class="self-center">
+                    <h3 class="text-3xl lg:text-4xl 2xl:text-5xl font-bold mb-10">Content title here</h3>
+                    <p class="text-xl lg:text-xl leading-normal 2xl:leading-relaxed mb-10">
+                        Supporting body copy - Lorem Ipsum is simply dummy text of the printing and 
+                        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+                        since the 1500s, when an unknown printer took a galley of type and scrambled it to 
+                        make a type specimen book.
+                    </p>
+                    <a href="#" class="block text-center lg:inline-block border border-black py-4 px-16 rounded-md font-bold mb-8 lg:mb-0">
+                        Book a meeting
+                    </a>
+                </div>
+                <img src="https://picsum.photos/800/700" alt="A well described alternative title for the image used">
+            </section>
+        </div>
+
+
+        <!-- Related Insights, 3 Column Articles -->
+        <section class="container py-20 lg:py-32 mx-auto">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-10 text-center mb-16">Related Insights</h2>
+
+            <div class="lg:grid lg:grid-cols-3 lg:gap-x-6 2xl:gap-x-12 mb-16">
+                <article class="lg:border-2 lg:border-black lg:flex lg:flex-col mb-8 lg:mb-0">
+                    <img src="https://picsum.photos/720/480" alt="" class="object-cover w-full lg:max-h-48 2xl:max-h-64">
+                    <div class="pl-8 pb-6 pt-4 pr-10 lg:flex lg:flex-col lg:flex-grow">
+                        <h4 class="text-2xl lg:text-xl font-bold mb-2">
+                            <span class="block text-sm mb-2">Sector / Service Tag</span>
+                            Article Title - One liner
+                        </h4>
+                        <time datetime="2020-03-16" class="block text-sm mb-2">March 16, 2020</time>
+                        <p class="text-lg lg:text-base mb-4">
+                            Lorem Ipsum is simply dummy text of the printing and 
+                            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+                            since the 1500s, when an unknown printer took a galley of type.
+                        </p>
+                        <a href="#" 
+                            aria-label="See more about Article Title" 
+                            class="inline-block font-bold mt-auto">
+                            See more
+                        </a>
+                    </div>
+                </article>
+
+                <article class="lg:border-2 lg:border-black lg:flex lg:flex-col mb-8 lg:mb-0">
+                    <img src="https://picsum.photos/720/480" alt="" class="object-cover w-full lg:max-h-48 2xl:max-h-64">
+                    <div class="pl-8 pb-6 pt-4 pr-10 lg:flex lg:flex-col lg:flex-grow">
+                        <h4 class="text-2xl lg:text-xl font-bold mb-2">
+                            <span class="block text-sm mb-2">Sector / Service Tag</span>
+                            Article Title goes here - perhaps over two lines!
+                        </h4>
+                        <time datetime="2020-03-16" class="block text-sm mb-2">March 16, 2020</time>
+                        <p class="text-lg lg:text-base mb-4">
+                            Lorem Ipsum is simply dummy text of the printing and 
+                            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+                            since the 1500s, when an unknown printer took a galley of type.
+                        </p>
+                        <a href="#" aria-label="See more about Article Title" class="font-bold mt-auto">See more</a>
+                    </div>
+                </article>
+
+                <article class="lg:border-2 lg:border-black lg:flex lg:flex-col mb-8 lg:mb-0">
+                    <img src="https://picsum.photos/720/480" alt="" class="object-cover w-full lg:max-h-48 2xl:max-h-64">
+                    <div class="pl-8 pb-6 pt-4 pr-10 lg:flex lg:flex-col lg:flex-grow">
+                        <h4 class="text-2xl lg:text-xl font-bold mb-2">
+                            <span class="block text-sm mb-2">Sector / Service Tag</span>
+                            Article Title goes here - perhaps over two lines!
+                        </h4>
+                        <time datetime="2020-03-16" class="block text-sm mb-2">March 16, 2020</time>
+                        <p class="text-lg lg:text-base mb-4">
+                            Lorem Ipsum is simply dummy text of the printing and 
+                            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+                            since the 1500s, when an unknown printer took a galley of type.
+                        </p>
+                        <a href="#" aria-label="See more about Article Title" class="font-bold mt-auto">See more</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <p class="lg:text-lg 2xl:text-2xl text-center lg:max-w-3xl 2xl:max-w-5xl 2xl:leading-relaxed mb-10">
+                    Supporting body copy - Lorem Ipsum is simply dummy text of the printing and 
+                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                </p>
+                <a href="#" class="inline-block border border-black py-4 px-7 rounded-md font-bold">Explore our MediaHub</a>
+            </div>
+        </section>
+
+        <section class="py-20 lg:py-32 border-t-2 border-b-2 border-black">
+            <div class="container mx-auto px-5 lg:grid lg:grid-cols-3 lg:gap-x-12">
+                <div class="mb-8 lg:mb-0">
+                    <h3 class="text-3xl font-bold mb-4">Contacts</h3>
+                    <p class="text-xl 2xl:text-2xl leading-relaxed mb-6 max-w-sm">
+                        Lorem Ipsum is simply dummy text 
+                        of the printing and typesetting.
+                    </p>
+                    <a href="#" class="inline-block border border-black py-4 px-7 rounded-md font-bold">
+                        Find your professional
+                    </a>
+                </div>
+                <figure class="flex mb-8 lg:mb-0">
+                    <img src="https://picsum.photos/250/250" 
+                        alt="Headshot of Name here staff member" 
+                        class="rounded-full border-2 border-black max-h-28">
+                    <figcaption class="ml-10">
+                        <h4 class="text-xl 2xl:text-2xl font-bold mb-1">Name here</h4>
+                        <p class="text-xl 2xl:text-2xl mb-2">Job Title</p>
+                        <a href="#" class="font-bold">Book a meeting</a>
+                    </figcaption>
+                </figure>
+                <figure class="flex">
+                    <img src="https://picsum.photos/250/250" 
+                        alt="Headshot of Name here staff member" 
+                        class="rounded-full border-2 border-black max-h-28">
+                    <figcaption class="ml-10">
+                        <h4 class="text-xl 2xl:text-2xl font-bold mb-1">Name here</h4>
+                        <p class="text-xl 2xl:text-2xl mb-2">Job Title</p>
+                        <a href="#" class="font-bold">Book a meeting</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <footer class="container mx-auto px-5 py-16">
+            <div class="lg:grid lg:grid-cols-4 lg:gap-x-12">
+                <ul class="mb-8 lg:mb-0">
+                    <h5 class="text-2xl font-bold mb-4">Company</h5>
+                    <li><a href="#" class="block text-sm font-bold mb-4">About us</a></li>
+                    <li><a href="#" class="block text-sm font-bold mb-4">Contact us</a></li>
+                </ul>
+
+                <ul class="mb-8 lg:mb-0">
+                    <h5 class="text-2xl font-bold mb-4">Legal</h5>
+                    <li><a href="#" class="block text-sm font-bold mb-4">Privacy policy</a></li>
+                    <li><a href="#" class="block text-sm font-bold mb-4">Cookie policy</a></li>
+                </ul>
+
+                <div class="col-span-2">
+                    <h5 class="text-2xl font-bold mb-2">Stay updated</h5>
+                    <p class="text-lg mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+
+                    <form action="" class="flex flex-wrap">
+                        <input type="text" placeholder="Enter your email" class="border border-black py-3 px-7 rounded-md flex-grow mb-4 lg:mb-0">
+                        <button type="submit" class="w-full lg:w-auto block border border-black py-3 px-7 rounded-md font-bold lg:ml-4">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </footer>
+
+        <!-- simple javascript for menu toggle -->
+        <script defer src="main.js"></script>
+    </body>
+</html>

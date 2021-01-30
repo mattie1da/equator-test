@@ -1,0 +1,29 @@
+/* 
+    For purposes of this quick demo I'm just Tailwind-ing via CDN, but in a project with PostCSS
+    I would apply repeated component classes to a single class and make them its own component. ie buttons, containers..
+    Utilising BEM naming methodology. For example:
+
+    .container {
+        @apply mx-auto;
+    }
+
+    // A universal button with shared classes among all buttons
+    .button {
+        @apply border;
+        @apply border-black;
+        @apply py-4;
+        @apply px-7;
+        @apply rounded-md;
+        @apply font-bold;
+
+        // Modifier button classes, with different background and text colours.
+        &--secondary {
+            @apply bg-red-500;
+            @apply text-white;
+        }
+
+        &--wide {
+            @apply px-10;
+        }
+    }
+ */
